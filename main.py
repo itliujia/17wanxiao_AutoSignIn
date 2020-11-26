@@ -24,8 +24,7 @@ def main():
             password.append(info[1])
             guardianPhone.append(info[2])
             egc.append(info[3])
-            roomnb.append(info[4])
-            sckey.append(info[5])
+            sckey.append(info[4])
         except:
             break
 
@@ -133,11 +132,12 @@ def GetUserJson(deptId,text,stuNum,userName,phone,guardianPhone,userId,customerI
                         "propertyname":"xinqing","value":"健康"
                         },
                     {
-                        "propertyname":"dormitory","value":roomnb
+                        "propertyname":"dormitory","value":"无"
                         }, {
 			"propertyname": "ownPhone",
 			"value": phone
-		}, {
+		},
+			{
 			"propertyname": "emergencyContact",
 			"value": egc
 		}, {
