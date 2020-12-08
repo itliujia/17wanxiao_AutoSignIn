@@ -152,9 +152,9 @@ def GetUserJson(deptId,text,stuNum,userName,phone,egcP,guardianPhone,userId,cust
 }
 
 #打卡提交函数
-def check_in(deptId,text,stuNum,userName,phone,egcP,guardianPhone,userId,customerId,token):
+def check_in(deptId,text,stuNum,userName,phone,guardianPhone,userId,customerId,token):
     sign_url = "https://reportedh5.17wanxiao.com/sass/api/epmpics"
-    jsons=GetUserJson(deptId,text,stuNum,userName,phone,egcP,guardianPhone,userId,customerId,token)
+    jsons=GetUserJson(deptId,text,stuNum,userName,phone,guardianPhone,userId,customerId,token)
     #提交打卡
     response = requests.post(sign_url, json=jsons,)
     return response
